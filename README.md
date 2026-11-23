@@ -1,41 +1,60 @@
-# us-roofing-climate-data
+# RidgeHero: US Municipal Roofing & Storm Data
 
-Structured datasets (CSV/JSON) covering NOAA storm history, annual precipitation 
-normals, and residential housing metrics across 109 US cities in 37 states.
+Open-source reference datasets, NOAA severe weather frequency records, and residential roof triage documentation maintained by the RidgeHero research project.
 
-Maintained by the [RidgeHero](https://ridgehero.com) engineering team to power 
-localized weather-risk assessments for emergency roofing dispatch.
+**Project Website:** [RidgeHero Roofing Network](https://ridgehero.com)
 
-## Coverage
+---
 
-- 109 municipalities across 37 US states
-- NOAA NWS county-level storm event history (wind, hail, tornado)
-- Annual precipitation normals (30-year baseline)
-- US Census residential housing density metrics
+## Overview
 
-## Data Structure
+This repository standardizes local meteorological stress metrics and residential housing age data across 109 US municipalities. The dataset correlates National Weather Service (NWS) storm records (hail, high-wind derechoes, severe thunderstorms) with residential roof maintenance lifecycles.
 
-Each city file is at `data/<state-abbr>/<city-slug>.json`:
+### Data Coverage
+* **Municipalities Tracked**: 109 cities across 37 US states
+* **Historical Range**: 1996–present (NOAA Storm Events Database)
+* **Key Indicators**: Median housing build year, single-family structure ratios, annual precipitation normals, wettest month indicators, and recorded hail/wind event counts.
+
+---
+
+## Published Documentation & Guides
+
+Technical guides and triage protocols developed for the dataset:
+* [Emergency Roof Leak Response Protocol](https://ridgehero.com/guides/what-to-do-roof-leak/)
+* [Severe Weather & Hail Damage Identification](https://ridgehero.com/guides/storm-damage-basics/)
+* [Contractor License & Insurance Verification Standards](https://ridgehero.com/guides/verify-roofing-contractor/)
+* [US Municipal Service Directory (109 Cities)](https://ridgehero.com/#cities)
+
+---
+
+## Data Structure Example
 
 ```json
 {
   "city": "Topeka",
-  "state": "KS",
+  "state": "Kansas",
   "county": "Shawnee",
-  "noaa_hail_events_5yr": 14,
-  "noaa_wind_events_5yr": 31,
-  "avg_annual_precip_in": 36.8,
-  "housing_units": 62140,
-  "median_year_built": 1968
+  "climate": {
+    "annual_precipitation_in": 37,
+    "wettest_month": "May",
+    "severe_events_since_1996": 1066,
+    "primary_hazard": "Hail (452 events)"
+  },
+  "housing": {
+    "median_year_built": 1967,
+    "single_family_ratio": "63.9%"
+  }
 }
 ```
 
-## Related Resources
+---
 
-- [What To Do When Your Roof Is Leaking](https://ridgehero.com/guides/what-to-do-roof-leak/)
-- [Emergency Roof Repair Network](https://ridgehero.com)
-- [Contact & Dispatch](https://ridgehero.com/contact)
+## License & Attribution
 
-## License
+Data compiled from US Census Bureau (ACS 5-Year Estimates) and the National Oceanic and Atmospheric Administration (NOAA). Published for public reference and homeowner education under open documentation standards.
 
-Data is derived from public NOAA and US Census sources. See LICENSE.
+## Maintainer & Inquiries
+
+Maintained by [@ridgehero](https://github.com/ridgehero).  
+* **Emergency Dispatch:** (855) 513-0946  
+* **General:** [Contact RidgeHero](https://ridgehero.com/contact)
