@@ -1,0 +1,10 @@
+{
+  "city": "Topeka",
+  "state": "KS",
+  "county": "Shawnee",
+  "noaa_hail_events_5yr": 14,
+  "noaa_wind_events_5yr": 31,
+  "avg_annual_precip_in": 36.8,
+  "housing_units": 62140,
+  "median_year_built": 1968
+}
