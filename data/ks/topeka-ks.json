@@ -1,10 +1,15 @@
 {
   "city": "Topeka",
-  "state": "KS",
+  "state": "Kansas",
   "county": "Shawnee",
-  "noaa_hail_events_5yr": 14,
-  "noaa_wind_events_5yr": 31,
-  "avg_annual_precip_in": 36.8,
-  "housing_units": 62140,
-  "median_year_built": 1968
+  "climate": {
+    "annual_precipitation_in": 37,
+    "wettest_month": "May",
+    "severe_events_since_1996": 1066,
+    "primary_hazard": "Hail (452 events)"
+  },
+  "housing": {
+    "median_year_built": 1967,
+    "single_family_ratio": "63.9%"
+  }
 }
